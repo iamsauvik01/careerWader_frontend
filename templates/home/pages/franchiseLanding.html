@@ -1,0 +1,543 @@
+{% extends "home/layouts/base.html" %}
+{% load static %}
+
+{% block pageStyle %}
+<link href="{% static 'home/assets/css/style.min.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+     
+    <!-- Hero Start -->
+    <section class="bg-half-175 border-bottom d-table w-100" id="home">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-md-7">
+              <div class="title-heading mt-4">
+                <div class="alert alert-pills shadow text-dark" role="alert">
+                  <span class="content">
+                    Call for
+                    <span class="text-primary">Career Counseling</span>
+                    Professionals</span
+                  >
+                </div>
+                <h1 class="heading mb-3">Join Our Network of Experts</h1>
+                <p class="para-desc text-muted">
+                  We are seeking experienced and passionate career counseling
+                  professionals to join our network. As a member of our network,
+                  you will have the opportunity to make a positive impact on
+                  people's lives, enhance your skills, and connect with
+                  like-minded professionals.
+                </p>
+                <div class="mt-4">
+                  <a
+                    href="{% url 'register' 'franchise' %}"
+                    class="btn btn-outline-primary rounded active"
+                    ><i class="uil uil-store"></i> Register </a
+                  >
+                  <a
+                    href="{% url 'contact' %}"
+                    class="btn btn-outline-primary rounded"
+                    ><i class="uil uil-store"></i> Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!--end col-->
+  
+            <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
+              <div class="position-relative">
+                <img
+                  src="{% static 'home/assets/images/partner.jpg' %}"
+                  class="rounded img-fluid mx-auto d-block"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+      </section>
+      <!--end section-->
+      <!-- Hero End -->
+  
+      <div class="container mt-100 mt-60">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="section-title mb-4 pb-2">
+              <h4 class="title mb-4">Benefits of Joining Our Network</h4>
+              <p class="text-muted para-desc mb-0 mx-auto">
+                At Career Wader, we don’t just offer Franchise Opportunities.
+                <span class="text-primary fw-bold">We offer Partnerships</span>
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+  
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div
+              class="card features feature-primary feature-clean explore-feature p-3 border-0 rounded-md shadow text-center"
+            >
+              <div class="icons text-center mx-auto">
+                <i class="uil uil-truck rounded h3 mb-0 mx-auto"></i>
+              </div>
+  
+              <div class="card-body p-0 content">
+                <h5 class="mt-4">
+                  <a href="javascript:void(0)" class="title" style="color: #fff"
+                    >Make a difference</a
+                  >
+                </h5>
+                <p class="text-muted">
+                  <span style="color: #fff"
+                    >Join a community of professionals dedicated to empowering
+                    individuals to achieve their career goals.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+  
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div
+              class="card features feature-primary feature-clean explore-feature p-3 border-0 rounded-md shadow text-center"
+            >
+              <div class="icons text-center mx-auto">
+                <i class="uil uil-plane-departure rounded h3 mb-0 mx-auto"></i>
+              </div>
+  
+              <div class="card-body p-0 content">
+                <h5 class="mt-4">
+                  <a href="javascript:void(0)" class="title" style="color: #fff"
+                    >Professional growth</a
+                  >
+                </h5>
+                <p class="text-muted">
+                  <span style="color: #fff"
+                    >Enhance your skills and knowledge through our training
+                    programs, workshops, and webinars.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+  
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div
+              class="card features feature-primary feature-clean explore-feature p-3 border-0 rounded-md shadow text-center"
+            >
+              <div class="icons text-center mx-auto">
+                <i class="uil uil-ship rounded h3 mb-0 mx-auto"></i>
+              </div>
+  
+              <div class="card-body p-0 content">
+                <h5 class="mt-4">
+                  <a href="javascript:void(0)" class="title" style="color: #fff"
+                    >Networking opportunities</a
+                  >
+                </h5>
+                <p class="text-muted">
+                  <span style="color: #fff"
+                    >Connect with other professionals in the field, share best
+                    practices, and collaborate on projects.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+  
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div
+              class="card features feature-primary feature-clean explore-feature p-3 border-0 rounded-md shadow text-center"
+            >
+              <div class="icons text-center mx-auto">
+                <i class="uil uil-money-stack rounded h3 mb-0 mx-auto"></i>
+              </div>
+  
+              <div class="card-body p-0 content">
+                <h5 class="mt-4">
+                  <a href="javascript:void(0)" class="title" style="color: #fff"
+                    >Flexible engagement</a
+                  >
+                </h5>
+                <p class="text-muted">
+                  <span style="color: #fff"
+                    >Choose from various engagement models, including part-time,
+                    full-time, project-based collaborations.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+      <!-- Shape Start -->
+      <div class="position-relative">
+        <div class="shape overflow-hidden text-color-white">
+          <svg
+            viewBox="0 0 2880 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <!--Shape End-->
+  
+      <div class="container mt-100 mt-60">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="section-title mb-4 pb-2">
+              <h4 class="title mb-4">Requirements</h4>
+            </div>
+            <img src="{% static 'home/assets/images/free.svg'%}" class="img-fluid" alt="" />
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+  
+      <section
+        class="bg-cta1"
+        id="volunteer"
+        style="background: url('{% static 'home/assets/images/application.jpg'%}') center"
+      >
+        <div class="container">
+          <div class="row justify-content-end">
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="card p-4 border-0 rounded">
+                <div class="section-title">
+                  <h4 class="title mb-4">How to Apply</h4>
+                  <p class="mb-0 text-muted">
+                    If you are interested in joining our network, please submit
+                    your application, including:
+                  </p>
+                </div>
+  
+                <ul class="list-unstyled text-muted pt-2">
+                  <li class="mb-1">
+                    <span class="text-primary h5 me-2"
+                      ><i class="uil uil-check-circle align-middle"></i></span
+                    ><strong>Resume:</strong> A detailed resume highlighting your
+                    experience, qualifications, and skills.
+                  </li>
+                  <li class="mb-1">
+                    <span class="text-primary h5 me-2"
+                      ><i class="uil uil-check-circle align-middle"></i></span
+                    ><strong>Cover letter:</strong> A brief cover letter outlining
+                    your motivation for joining our network and your relevant
+                    experience.
+                  </li>
+                  <li class="mb-1">
+                    <span class="text-primary h5 me-2"
+                      ><i class="uil uil-check-circle align-middle"></i></span
+                    ><strong>Contact information:</strong> Your email address and
+                    phone number.
+                  </li>
+                </ul>
+  
+                <div class="section-title">
+                  <h5>
+                    <a
+                      href="javascript:void(0)"
+                      class="card-title1 title1 text-dark"
+                      >What's Next:</a
+                    >
+                  </h5>
+                  <p class="mb-0 text-muted">
+                    Once we receive your application, our team will review it and
+                    contact you for further discussion.
+                  </p>
+                </div>
+                <br />
+                <a href="{% url 'register' 'franchise' %}" type="submit" class="btn btn-primary">
+                  Register Now
+                </a>
+              </div>
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+      </section>
+      <!--end section-->
+  
+      <!-- About Start -->
+      <section class="section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+              <div class="row align-items-center">
+                <div class="col-lg-6 col-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                  <div
+                    class="card work-container work-primary work-modern overflow-hidden rounded border-0 shadow-md"
+                  >
+                    <div class="card-body p-0">
+                      <img
+                        src="{% static 'home/assets/images/join1.jpg'%}"
+                        class="img-fluid"
+                        alt="work-image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+  
+                <div class="col-lg-6 col-6">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                      <div
+                        class="card work-container work-primary work-modern overflow-hidden rounded border-0 shadow-md"
+                      >
+                        <div class="card-body p-0">
+                          <img
+                            src="{% static 'home/assets/images/join2.jpg'%}"
+                            class="img-fluid"
+                            alt="work-image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+  
+                    <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                      <div
+                        class="card work-container work-primary work-modern overflow-hidden rounded border-0 shadow-md"
+                      >
+                        <div class="card-body p-0">
+                          <img
+                            src="{% static 'home/assets/images/course/online/ab03.jpg'%}"
+                            class="img-fluid"
+                            alt="work-image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                </div>
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </div>
+            <!--end col-->
+  
+            <div class="col-lg-7 col-md-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
+              <div class="ms-lg-4">
+                <div class="section-title">
+                  <span class="badge bg-soft-primary rounded-pill fw-bold"
+                    >Join us as a strategic partner, not just a Franchise</span
+                  >
+                  <h4 class="title mb-4 mt-3">
+                    Be a part of our Growth. With Revenue <br />
+                    Sharing and Exclusive Portfolio.
+                  </h4>
+  
+                  <p class="text-muted para-desc">
+                    <span class="text-primary fw-bold"
+                      >Expansion Opportunities</span
+                    >
+                  </p>
+  
+                  <p class="text-muted para-desc">
+                    At Career Wader, we don’t just offer Franchise Opportunities.
+                    We offer Partnerships.
+                  </p>
+  
+                  <p class="text-muted para-desc">
+                    When you become a part of our AI driven Career Counseling
+                    Platform, you are not just joining a network, but gaining
+                    stake in the future of ‘personalized Career Guidance ‘
+                  </p>
+  
+                  <a
+                    href="{% url 'register' 'franchise' %}"
+                    class="btn btn-primary m-1"
+                    >Ready to take the Next Steps?
+                    <i class="uil uil-angle-right-b align-middle"></i
+                  ></a>
+                </div>
+  
+                <div class="mt-4 pt-2">
+                  <p class="text-muted para-desc">
+                    Become a Partner in our exciting journey and unlock high
+                    levels of growth and opportunity.<br /><span
+                      class="text-primary fw-bold"
+                      >Contact us</span
+                    >
+                    to learn more about becoming a Franchise partner with us.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+  
+        <!-- <div class="container mt-100 mt-60">
+                   <div class="row justify-content-center">
+                      <div class="col-12 text-center">
+                          <div class="section-title mb-4 pb-2">
+                              <h4 class="title mb-4">How to get started</h4>
+                              
+                          </div>
+                      </div>
+                  </div> -->
+  
+        <!-- <div class="row">
+                      <div class="col-md-4 mt-4 pt-2" >
+                          <div class="card work-process border-0 rounded shadow" style="height: 200px;">
+                              <div class="card-body">
+                                  <h4 class="title">Easy Entry</h4>
+                                  <p class="text-muted para">Low Costs; High Rewards Model</p>
+                                  <a href="javascript:void(0)" class="text-primary">Read more <i class="uil uil-angle-right-b"></i></a>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="col-md-4 mt-4 pt-2">
+                          <div class="card work-process border-0 rounded shadow" style="height: 200px;">
+                              <div class="card-body">
+                                  <h4 class="title">Comprehensive Training</h4>
+                                  <p class="text-muted para">Become an expert Career Counselor with our simple, practical training</p>
+                                  <a href="javascript:void(0)" class="text-primary">Read more <i class="uil uil-angle-right-b"></i></a>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="col-md-4 mt-4 pt-2">
+                          <div class="card work-process border-0 rounded shadow">
+                              <div class="card-body">
+                                  <h4 class="title">Little or no exposure is needed</h4>
+                                  <p class="text-muted para">If you are  an Undergraduate , passionate about guiding others and self-motivated, we will take care of the rest!</p>
+                                  <a href="javascript:void(0)" class="text-primary">Read more <i class="uil uil-angle-right-b"></i></a>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+      </section>
+      <!--end section-->
+  
+      <!-- About End -->
+  
+      <!-- Team Start -->
+  
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
+            <div class="section-title ms-lg-4">
+              <h4 class="title mb-4">Ready to Make a Difference in your Life</h4>
+              <p class="text-muted">
+                <span class="text-primary fw-bold">Join us </span>us in empowering
+                students to find the careers they love while building a profitable
+                business for yourself.
+              </p>
+  
+              <p class="text-muted">
+                Visit
+                <span class="text-primary fw-bold">www.careerwader.in</span> to
+                take the first step towards becoming a successful edupreneur.
+              </p>
+  
+              <p class="text-muted">
+                Join thousands of students and working professionals who are
+                shaping their futures with our unique AI empowered solutions.
+              </p>
+  
+              <p class="text-muted">
+                <span class="text-primary fw-bold">Contact Number: </span>+ 91 9108760180/ +91 9591577855<br />
+  
+                <span class="text-primary fw-bold">Website</span
+                >: www.careerwader.in
+              </p>
+  
+              <p class="display-6">
+                Make an Impact! Make a Profit! Become our Franchisee today
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+  
+          <div class="col-lg-5 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
+            <div class="position-relative">
+              <img
+                src="{% static 'home/assets/images/join.jpg'%}"
+                class="rounded img-fluid mx-auto d-block"
+                alt=""
+              />
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+  
+      <div class="container mt-100 mt-60">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <img
+                src="{% static 'home/assets/images/unfold.jpg'%}"
+                class="rounded img-fluid mx-auto d-block"
+                alt=""
+              />
+            </div>
+          </div>
+          <!--end col-->
+          <div class="col-lg-6">
+            <div class="section-title">
+              <h4 class="title mb-4">
+                Unfold your path to success with our Career Counseling
+                <span class="text-primary">Franchise</span> Opportunity!
+              </h4>
+  
+              <h5>Become an Eduprenuer today</h5>
+              <p class="text-muted para-desc">
+                Are you looking to build a rewarding
+                <span class="text-primary fw-bold">enterprise (business)</span>
+                while helping students to shape their future?
+              </p>
+  
+              <p class="text-muted para-desc">
+                Join our Career Counseling Platform – the AI based solution
+                transforming career choices for students across India.
+              </p>
+              <a href="{% url 'register' 'franchise' %}">
+                <button type="submit" class="btn  btn-primary">Resgister Now </button>
+            </a>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+  
+      <!--end section-->
+  
+      <br />
+      <!-- Team End -->
+{% endblock %}

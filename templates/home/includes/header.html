@@ -1,0 +1,124 @@
+{% load static %}
+
+<header id="topnav" class="defaultscroll sticky">
+    <div class="container">
+        <!-- Logo container-->
+        <a class="logo" href="{%url 'index' %}">
+            <img src="{% static 'home/assets/images/logo-dark.png'%}" height="45" class="logo-light-mode" alt="">
+            <img src="{% static 'home/assets/images/logo-light.png'%}" height="24" class="logo-dark-mode" alt="">
+        </a>                
+        <!-- Logo End -->
+
+        <!-- End Logo container-->
+        <div class="menu-extras">
+            <div class="menu-item">
+                <!-- Mobile menu toggle-->
+                <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <!-- End mobile menu toggle-->
+            </div>
+        </div>
+
+        <!--Login button Start-->
+        <ul class="buy-button list-inline mb-0">
+            <li class="list-inline-item mb-0">
+                <a href = " {% url 'login' %} ">
+                    <div class="btn btn-icon btn-pills btn-soft-primary"><i class="uil uil-user-plus align-middle"></i></div>
+                </a>
+            </li>
+    
+            <li class="list-inline-item ps-1 mb-0">
+                <a href="{% url 'register' 'students' %}">
+                    <button class="btn btn-primary"> Registration </button>
+                </a>
+            </li>
+        </ul>
+        <!--Login button End-->
+
+        <div id="navigation">
+            <!-- Navigation Menu-->   
+            <ul class="navigation-menu">
+                
+                {% comment %} <li class="has-submenu parent-parent-menu-item">
+                    <a href="javascript:void(0)">Students</a><span class="menu-arrow"></span>
+                    <ul class="submenu megamenu">
+                        <li>
+                            <ul>
+                                <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> STREAM SELECTION</li>
+                                <li><a href="index-saas.html" class="sub-menu-item"><h6>Class 8, 9-10 stream Selection</h6>
+
+                                     <p>AI based Stream & Career Assessment and Presonalized <br>Guidance to help you select the right stream</p>
+
+                                </a></li>
+
+
+                                <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> PROFESSIONAL CAREER GUIDANCE</li>
+                                <li><a href="index-saas.html" class="sub-menu-item"><h6>Graduates and Professional-Career Selection</h6>
+
+                                     <p>Career assessment, Career Reports and guidance to help you with <br>the perfect career choice and switch</p>
+
+                                </a></li>
+
+                                <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> FIND JOBS</li>
+                                <li><a href="index-saas.html" class="sub-menu-item"><h6>Find jobs near your city in India and Abroad</h6>
+
+                                     <p>Search based on skill, experience and recent job openings for top <br>recruiters in the country</p>
+
+                                </a></li>                             
+                            </ul>
+                        </li>
+
+                        <li>
+                            <ul>
+
+
+                                 <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> CAREER SELECTION</li>
+                                <li><a href="index-saas.html" class="sub-menu-item"><h6>Class 11-12-Career Selection</h6>
+
+                                     <p>Career assessment, Career Report and Guidance to help you with the<br> right career choice</p>
+
+                                </a></li>
+
+                                <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> STUDY ABROAD</li>
+                                <li><a href="index-saas.html" class="sub-menu-item"><h6>India and abroad study counseling and mentoring</h6>
+
+                                     <p>Study in top college in India or Abroad and get complete support on <br>admission process, document preparation and applications</p>
+
+                                </a></li>               
+                            </ul>
+                        </li>                              
+                    </ul>
+                </li> {% endcomment %}
+
+                {% comment %} <li class=" ">
+                    <a href="javascript:void(0)">Career Professionals</a>
+                </li> {% endcomment %}
+
+                {% comment %} <li class="has-submenu parent-parent-menu-item">
+                    <a href="{% url 'counsellor' %}">Find Counsellors</a>
+                </li> {% endcomment %}
+
+                <li class="has-submenu parent-parent-menu-item">
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+
+                <li class="has-submenu parent-parent-menu-item">
+                    <a href="{% url 'franchiseLanding' %}">Franchise</a>
+                </li>
+
+                <li class="has-submenu parent-parent-menu-item">
+                    <a href="{%url 'about-us' %}">About Us</a>
+                </li>
+
+                <li class="has-submenu parent-menu-item">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#LoginForm"><i class="uil uil-users-alt rounded  mb-0"></i> Become a Partner</a>
+                </li>
+            </ul><!--end navigation menu-->
+        </div><!--end navigation-->
+    </div><!--end container-->
+</header>

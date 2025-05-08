@@ -1,0 +1,101 @@
+{% load static %}
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+      <a href="{%url 'index'%}" class="app-brand-link">
+        <span class="app-brand-logo demo">
+          <img src="{% static 'assets/images/logo-dark.png'%}" height="45" class="logo-light-mode" alt="">
+        </span>
+        
+      </a>
+
+      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none"><i class="bx bx-chevron-left bx-sm align-middle"></i></a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+      <!-- Dashboard -->
+      <li class="menu-item active">
+        <a href="{% url 'dashboard' %}" class="menu-link">
+          <i class="menu-icon tf-icons bx bx-home-circle"></i>
+          <div data-i18n="Analytics">Dashboard</div>
+        </a>
+      </li>
+
+      <!-- Layouts -->
+      {% comment %} <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bx-layout"></i>
+          <div data-i18n="Layouts">Layouts</div>
+        </a>
+
+        <ul class="menu-sub">
+          <li class="menu-item">
+            <a href="layouts-without-menu.html" class="menu-link"><div data-i18n="Without menu">Without menu</div></a>
+          </li>
+          <li class="menu-item">
+            <a href="layouts-without-navbar.html" class="menu-link"><div data-i18n="Without navbar">Without navbar</div></a>
+          </li>
+          <li class="menu-item">
+            <a href="layouts-container.html" class="menu-link"><div data-i18n="Container">Container</div></a>
+          </li>
+          <li class="menu-item">
+            <a href="layouts-fluid.html" class="menu-link"><div data-i18n="Fluid">Fluid</div></a>
+          </li>
+          <li class="menu-item">
+            <a href="layouts-blank.html" class="menu-link"><div data-i18n="Blank">Blank</div></a>
+          </li>
+        </ul>
+      </li> {% endcomment %}
+
+      <li class="menu-header small text-uppercase">
+        <span class="menu-header-text">Pages</span>
+      </li>
+
+      {% comment %} <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+          <div data-i18n="Authentications">Authentications</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item">
+            <a href="{% url 'login' %}" class="menu-link"><div data-i18n="Basic">Login</div></a>
+          </li>
+          <li class="menu-item">
+            <a href="{% url 'register'%}" class="menu-link"><div data-i18n="Basic">Register</div></a>
+          </li>
+        </ul>
+      </li> {% endcomment %}
+
+      
+      {% if  request.COOKIES.role == 'admin' %}
+        <li class="menu-item">
+          <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+            <div data-i18n="Account Settings">Enquiries</div>
+          </a>
+          <ul class="menu-sub">
+            <li class="menu-item">
+              <a href="{% url  'shortEnquiryDisplay' %}" class="menu-link"><div data-i18n="Account">Short Enquiry</div></a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="menu-item">
+          <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+            <div data-i18n="Misc">Users</div>
+          </a>
+          <ul class="menu-sub">
+            <li class="menu-item">
+              <a href="{% url  'studentDisplay'%}" class="menu-link"><div data-i18n="Account">Students</div></a>
+            </li>
+            <li class="menu-item">
+              <a href="{% url  'franchiseDisplay'%}" class="menu-link"><div data-i18n="Account">Franchise</div></a>
+            </li>
+          </ul>
+        </li>
+      {% endif %}
+
+    </ul>
+  </aside>
