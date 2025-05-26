@@ -202,20 +202,32 @@
 </script>
 
 <script>
-    $('#formAuthentication').on('submit', function(e) {
-        e.preventDefault();
-        
-        // Show loading modal
-        const loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
-        loadingModal.show();
+// Declare loadingModal globally so it can be reused
+let loadingModal;
+
+$('#formAuthentication').on('submit', function(e) {
+    e.preventDefault();
     
-        const data = {
-            email: $('#email').val(),
-            password: $('#password').val()
-        };
-       
-        const baseUrl = "{{ api_base_url|escape }}";
-        axios.post(`${baseUrl}api/token/`, data)
+    // Initialize or get the loading modal instance
+    if (!loadingModal) {
+        loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
+    }
+    
+    // Ensure modal is hidden before showing (in case it's stuck from previous attempt)
+    loadingModal.hide();
+    
+    // Small delay to ensure previous hide operation completes
+    setTimeout(() => {
+        loadingModal.show();
+    }, 100);
+
+    const data = {
+        email: $('#email').val(),
+        password: $('#password').val()
+    };
+   
+    const baseUrl = "{{ api_base_url|escape }}";
+    axios.post(`${baseUrl}api/token/`, data)
     .then(function(response) {
         // Hide loading modal
         loadingModal.hide();
@@ -233,7 +245,7 @@
         window.location.href = redirectURL;
     })
     .catch(function(error) {
-        // Hide loading modal
+        // Ensure loading modal is hidden
         loadingModal.hide();
 
         let title = 'Login Failed!';
@@ -266,14 +278,16 @@
             message = 'Request setup error: ' + error.message;
         }
 
-        Swal.fire({
-            title: title,
-            text: message,
-            icon: 'error',
-            confirmButtonText: 'Try Again'
-        });
+        // Add a small delay before showing SweetAlert to ensure loading modal is fully hidden
+        setTimeout(() => {
+            Swal.fire({
+                title: title,
+                text: message,
+                icon: 'error',
+                confirmButtonText: 'Try Again'
+            });
+        }, 200);
     });
-
-    });
+});
 </script>
 {% endblock %}

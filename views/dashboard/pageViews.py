@@ -13,14 +13,11 @@ def dashboard(request):
         # Print all session data for debugging
         # print("Session data:", dict(request.session))  
 
-        # Access role from session (not cookies)
         role = request.session.get('user_role', 'Guest')
 
         return render(request, 'dashboard/pages/dashboard.html', {'role': role})
     except Exception as e:
         return HttpResponse(f"An error occurred: {e}", status=500)
-
-        
 
 def loginPageDisplay(request):
     try:

@@ -2,6 +2,7 @@ import requests
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib import messages
+from django.conf import settings
 
 class TokenAuthMiddleware:
     def __init__(self, get_response):
@@ -21,8 +22,8 @@ class TokenAuthMiddleware:
                 return self.get_response(request)
 
             # Check if token is valid by hitting a protected endpoint
-            check_url = 'http://192.168.29.142:8002/api/enquiry/'
-            refresh_url = 'http://192.168.29.142:8002/api/token/refresh/'
+            check_url = settings.API_BASE_URL + 'api/enquiry/'
+            refresh_url = settings.API_BASE_URL + 'api/token/refresh/'
             headers = {'Authorization': f'Bearer {access_token}'}
 
             response = requests.get(check_url, headers=headers)
