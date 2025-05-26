@@ -35,7 +35,7 @@ urlpatterns = [
     # path('franchise-landing/',mainPageViews.franchiseLanding, name = "franchiseLanding"),
     path('faq-franchise/',mainPageViews.faqFranchise, name = "faqFranchise"),
     
-    path('test/', mainPageViews.test),
+    # path('test/', mainPageViews.test),
     
     # Login Register Route
     path('login/', pageViews.loginPageDisplay, name = 'login'),
