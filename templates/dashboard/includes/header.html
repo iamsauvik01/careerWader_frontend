@@ -36,8 +36,8 @@
                     </div>
                   </div>
                   <div class="flex-grow-1">
-                    <span class="fw-semibold d-block">John Doe</span>
-                    <small class="text-muted">Admin</small>
+                    <span class="fw-semibold d-block">Greetings!!</span>
+                    {% comment %} <small class="text-muted">Admin</small> {% endcomment %}
                   </div>
                 </div>
               </a>
@@ -70,7 +70,7 @@
               <div class="dropdown-divider"></div>
             </li>
             <li>
-              <a class="dropdown-item" href="auth-login-basic.html">
+              <a class="dropdown-item" onclick="logout()">
                 <i class="bx bx-power-off me-2"></i>
                 <span class="align-middle">Log Out</span>
               </a>
@@ -81,3 +81,17 @@
       </ul>
     </div>
   </nav>
+
+  <script>
+    function logout() {
+    // Overwrite each cookie with max-age=0 to delete
+    document.cookie = "access_token=; path=/; max-age=0";
+    document.cookie = "refresh_token=; path=/; max-age=0";
+    document.cookie = "role=; path=/; max-age=0";
+
+    // const redirectURL = "{% url 'franchiseLanding' %}";
+
+    // window.location.href = redirectURL;  // Redirect to login page
+    location.reload();
+    }
+  </script>
